@@ -1,1 +1,2 @@
 from User.serializers.user_serializer import UserSerializer
+from User.serializers.mixin_serializer import LocationMixinSerializer, TimeStampesMixinSerializer
