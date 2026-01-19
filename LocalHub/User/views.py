@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from User.models import User
-from User.serializers import UserSerializer, LocationMixinSerializer
+from User.serializers import UserSerializer
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
@@ -8,7 +8,7 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     def get_serializer_class(self):
         if self.action == "get_distance":
-            return LocationMixinSerializer
+            return UserSerializer 
         return UserSerializer
     
 
